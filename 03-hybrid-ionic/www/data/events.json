@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Library Book Fair",
+    "category": "Academic",
+    "date": "2026-11-03",
+    "time": "10:00 AM",
+    "venue": "Central Library Hall",
+    "description": "Buy second-hand textbooks at half price and exchange your old ones. All departments are welcome."
+  },
+  {
+    "id": 2,
+    "title": "Tech Symposium 2026",
+    "category": "Academic",
+    "date": "2026-11-06",
+    "time": "09:30 AM",
+    "venue": "Main Auditorium",
+    "description": "Student paper presentations, a project expo and a guest talk on the future of mobile apps."
+  },
+  {
+    "id": 3,
+    "title": "Placement Training Workshop",
+    "category": "Academic",
+    "date": "2026-11-10",
+    "time": "02:00 PM",
+    "venue": "Seminar Hall B",
+    "description": "Resume writing, aptitude practice and a mock interview round for final-year students."
+  },
+  {
+    "id": 4,
+    "title": "Annual Sports Day",
+    "category": "Sports",
+    "date": "2026-11-14",
+    "time": "08:00 AM",
+    "venue": "College Ground",
+    "description": "Track and field events, relay races and the inter-department tug of war. Come and cheer!"
+  },
+  {
+    "id": 5,
+    "title": "Blood Donation Camp",
+    "category": "Sports",
+    "date": "2026-11-17",
+    "time": "09:00 AM",
+    "venue": "Health Centre",
+    "description": "Organised with the NSS unit. Every donor gets a certificate and a refreshment."
+  },
+  {
+    "id": 6,
+    "title": "Vibrance Cultural Fest",
+    "category": "Cultural",
+    "date": "2026-11-21",
+    "time": "05:00 PM",
+    "venue": "Open Air Theatre",
+    "description": "An evening of music, dance, drama and food stalls run by student clubs."
+  }
+]

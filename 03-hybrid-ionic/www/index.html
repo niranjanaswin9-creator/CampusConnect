@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0" />
+    <title>CampusConnect Events</title>
+
+    <!-- Ionic's ready-made look and its components, loaded from a CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@8/css/ionic.bundle.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@8/dist/ionic/ionic.esm.js"></script>
+
+    <!-- Our own small touches -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <ion-app>
+      <ion-header>
+        <ion-toolbar color="primary">
+          <ion-title>College Events</ion-title>
+        </ion-toolbar>
+        <ion-toolbar>
+          <ion-searchbar id="search" placeholder="Search events"></ion-searchbar>
+        </ion-toolbar>
+        <ion-toolbar>
+          <ion-segment id="filter" value="All">
+            <ion-segment-button value="All"><ion-label>All</ion-label></ion-segment-button>
+            <ion-segment-button value="Academic"><ion-label>Academic</ion-label></ion-segment-button>
+            <ion-segment-button value="Cultural"><ion-label>Cultural</ion-label></ion-segment-button>
+            <ion-segment-button value="Sports"><ion-label>Sports</ion-label></ion-segment-button>
+          </ion-segment>
+        </ion-toolbar>
+      </ion-header>
+
+      <ion-content>
+        <ion-list id="event-list"></ion-list>
+      </ion-content>
+
+      <!-- The "details" screen. It stays hidden until we open it from JavaScript. -->
+      <ion-modal id="event-modal">
+        <ion-header>
+          <ion-toolbar color="primary">
+            <ion-title>Event Details</ion-title>
+            <ion-buttons slot="end">
+              <ion-button id="close-modal">Close</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-badge id="m-category"></ion-badge>
+          <h1 id="m-title"></h1>
+          <p class="detail-line" id="m-when"></p>
+          <p class="detail-line" id="m-venue"></p>
+          <p id="m-description"></p>
+        </ion-content>
+      </ion-modal>
+    </ion-app>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

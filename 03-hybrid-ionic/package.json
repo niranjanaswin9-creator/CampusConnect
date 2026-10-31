@@ -1,0 +1,8 @@
+{
+  "name": "campusconnect-events",
+  "version": "1.0.0",
+  "description": "CampusConnect hybrid module built with Ionic web components",
+  "scripts": {
+    "start": "npx serve www"
+  }
+}

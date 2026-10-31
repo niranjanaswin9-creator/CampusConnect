@@ -1,0 +1,206 @@
+/* ---------- Colours and basics ---------- */
+:root {
+  --primary: #1f3864;
+  --accent: #0f6b72;
+  --background: #f4f6f8;
+  --card: #ffffff;
+  --text: #222222;
+  --muted: #6b7280;
+  --danger: #c62828;
+  --success: #2e7d32;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ---------- Top bar and tabs ---------- */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  color: #fff;
+  padding: 14px 16px;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.install-btn {
+  background: #fff;
+  color: var(--primary);
+  border: 0;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tabs {
+  display: flex;
+  background: var(--card);
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tab {
+  flex: 1;
+  padding: 14px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  background: none;
+  font-size: 15px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.tab.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- Panels (only the active one is visible) ---------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+/* ---------- Dashboard cards ---------- */
+.cards {
+  display: grid;
+  grid-template-columns: 1fr; /* phone: one card per row */
+  gap: 14px;
+}
+
+.card {
+  background: var(--card);
+  border-left: 6px solid var(--primary);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.card .label {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.card .value {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 4px 0;
+}
+
+/* ---------- Timetable ---------- */
+.day-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.day-btn {
+  border: 1px solid var(--accent);
+  background: none;
+  color: var(--accent);
+  border-radius: 16px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.day-btn.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+.class-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.class-card {
+  display: flex;
+  background: var(--card);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.class-time {
+  background: var(--primary);
+  color: #fff;
+  padding: 12px;
+  font-size: 13px;
+  text-align: center;
+  min-width: 70px;
+}
+
+.class-info {
+  padding: 12px 14px;
+}
+
+.class-info strong {
+  display: block;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 30px 0;
+}
+
+/* ---------- Offline banner ---------- */
+.offline-banner {
+  background: var(--danger);
+  color: #fff;
+  text-align: center;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.offline-banner[hidden],
+.install-btn[hidden] {
+  display: none;
+}
+
+/* ---------- Responsive: tablet (768px and wider) ---------- */
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr); /* three cards in a row */
+  }
+  .class-list {
+    grid-template-columns: repeat(2, 1fr); /* two classes per row */
+  }
+}
+
+/* ---------- Responsive: desktop (1100px and wider) ---------- */
+@media (min-width: 1100px) {
+  main {
+    max-width: 1100px;
+  }
+  .topbar h1 {
+    font-size: 24px;
+  }
+}

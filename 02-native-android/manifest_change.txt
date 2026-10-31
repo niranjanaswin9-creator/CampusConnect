@@ -1,0 +1,6 @@
+Open app/src/main/AndroidManifest.xml and add this ONE line
+directly above the <application ...> tag (inside <manifest>):
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+Everything else in the manifest stays exactly as Android Studio made it.
